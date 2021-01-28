@@ -1,4 +1,4 @@
-## Microservizio ETL_L3
+# Microservizio ETL_L3
 
 Il modulo ETL_L3, realizzato in linguaggio Java, si occupa di caricare i dati da topic Kafka, per riscriverli, dopo eventuali elaborazioni, su un altro sistema, nel caso in oggetto, in-memory data store Redis.
 
@@ -6,7 +6,7 @@ Non è stata data una specifica per la struttura dati da utilizzare, pertanto so
 
 Per tale scopo, il microservizio utilizza la Consumer API di Kafka e l'API Jedis per la comunicazione con Redis.
 
-### Configurazione
+## Configurazione
 E' possibile configurare l'ETL_L3 mediante un file di properties, passato contestualmente al lancio del servizio, 
 mediante l'opzione java `-Dproperties.file="ETL_L3.properties"`, contenente i seguenti campi:
 
@@ -23,7 +23,7 @@ Tramite il metodo `execute`, il consumer si occupa di consumare i messaggi sul t
 Redis secondo le modalità previste, definite tramite la classe `IWriter`. 
 
 
-### RedisWriter
+## RedisWriter
 Questa è la classe che si occupa di effettuare la scrittura su Redis.
 
 Essa si occupa principalmente di effettuare due operazioni sul db:
